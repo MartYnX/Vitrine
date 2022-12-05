@@ -8,14 +8,14 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PagesController extends AbstractController
 {
-    #[Route('/', name: 'app_Home')]
-    public function Home(): Response
+    #[Route('/', name: 'app_home')]
+    public function home(): Response
     {
         return $this->render('pages/home.html.twig');
     }
 
-    #[Route('/about', name: 'app_About')]
-    public function About(): Response
+    #[Route('/about', name: 'app_about')]
+    public function about(): Response
     {
         return $this->render('pages/about.html.twig');
     }

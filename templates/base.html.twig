@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Voici un titre{% endblock %}</title>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Voici un titre
+			{% endblock %}
+		</title>
 
-        {% block stylesheets %}
-            {# {{ encore_entry_link_tags('app') }} #}
-        {% endblock %}
+		{% block stylesheets %}
+			{# {{ encore_entry_link_tags('app') }} #}
+		{% endblock %}
 
-        {% block javascripts %}
-            {# {{ encore_entry_script_tags('app') }} #}
-        {% endblock %}
-    </head>
-    
-    <body>
-        {% block body %}{% endblock %}
-    </body>
-</html>
+		{% block javascripts %}
+			{# {{ encore_entry_script_tags('app') }} #}
+		{% endblock %}
+	</head>
+
+	<body>
+
+		{{include('navigation/nav.html.twig')}}
+
+		<hr>
+
+		<main role="main"> 
+            {% block body %}{% endblock %}
+		</main>
+
+
+		</body>
+	</html>
