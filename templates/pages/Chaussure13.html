@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!-- CSS bootstrap -->
+    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" /> <!-- CSS police d'écriture -->
+    <link href="css/style.css" rel="stylesheet"> <!-- CSS principal -->
+
+    <title>AMCE - Boutique</title> <!-- Titre onglet -->
+    <link href="img/logo-chaussure.png" rel="icon"> <!-- Icon onglet -->
+</head>
+
+<body>
+
+    <section id="container">
+        <header class="header black-bg">
+            <div class="sidebar-toggle-box">
+                <!-- Bouton menu burger -->
+                <div class="fa fa-bars tooltips" data-placement="right"></div>
+            </div>
+
+            <!-- Titre principal-->
+            <p class="titre-principal"><b><span>AMCE</span></b></p>
+
+            <!-- Profile-->
+            <p class="placement-rond"><a href="connexion.html"><img src="img/logo-personnage.png" class="img-circle" width="50"></a></p>
+
+        </header>
+
+        <!-- Menu de gauche -->
+        <aside>
+            <div id="sidebar" class="nav-collapse">
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <img src="img/logo-chaussure.png" class="placement-logo-chaussure" width="200">
+
+                    <li class="sub-menu">
+                        <a class="active" href="boutique.html">
+                            <i class="fleche"></i>
+                            <span>Boutique</span>
+                        </a>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a class="active" href="panier.html">
+                            <i class="fleche"></i>
+                            <span>Mon panier</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </aside>
+    </section>
+
+    <section id="configuration">
+        <section class="wrapper">
+            <form>
+                <br>
+                <h3><i class="fa fa-angle-right"></i> Détail du produit</h3>
+
+                <hr>
+
+                <div class="page">
+                    
+                    <center>
+                        <div class="cadre">
+                            <img src="img/Chaussure 13.png" width="500">
+                            <br><br>
+                            <h4>Nom du produit : Klak ette</h4>
+                            <br>
+                            <h4>Référence du produit : Lideule</h4>
+                            <br>
+                            <h4>Prix unitaire : 10 €</h4>
+                            <br>
+                            <label><h4>Pointure :</h4></label>
+                            <select name="pointure">
+                                <option value="40">40</option>
+                                <option value="42">42</option>
+                                <option value="44">44</option>
+                                <option value="46">46</option>
+                                <option value="48">48</option>
+                                <option value="50">50</option>
+                            </select>
+
+                            <br><br>
+
+                            <label><h4>Quantité :</h4></label>
+                            <select name="quantité">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            
+                            <br>
+
+                            <hr>
+                            <!-- Bouton Ajouter au panier -->
+                            <input type="submit" class="boutton" value="Ajouter au panier"></a>
+                            <!-- Bouton Retour -->
+                            <p style="text-align:center"><a href="boutique.html" input type="submit" class="boutton" value="Retour à la boutique">Retour à la boutique</p></a>
+                            <hr>
+
+                        </div>
+                    </center>
+
+                    
+
+                </div>
+
+                <hr>
+
+                <!-- Bas de page -->
+                <footer class="footer">
+                    Site Web - AMCE
+                    <br>
+                    Vente de chaussure en ligne
+                </footer>
+
+        </section>
+    </section>
+
+    <!-- Script à garder -->
+
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap-switch.js"></script>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="lib/jquery-accordion.js" type="text/javascript" class="include"></script>
+    <script src="lib/jquery.dcjqaccordion.2.7.js" type="text/javascript" class="include"></script>
+    <script src="lib/common-scripts.js"></script>
+
+
+
+</body>
+
+</html>

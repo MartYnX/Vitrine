@@ -1,0 +1,50 @@
+CREATE DATABASE acme;
+USE acme;
+CREATE TABLE utilisateur(
+   id_utilisateur INT,
+   email VARCHAR(50),
+   nom VARCHAR(50),
+   prenom VARCHAR(50),
+   num_tel DOUBLE,
+   admin varchar(50) NOT NULL,
+   PRIMARY KEY(id_utilisateur)
+);
+
+CREATE TABLE panier(
+   id_commande INT,
+   date_Commande DATE,
+   date_Livraison DATE,
+   date_envoie DATE,
+   ville_livraison TEXT,
+   id_utilisateur INT NOT NULL,
+   PRIMARY KEY(id_commande),
+   FOREIGN KEY(id_utilisateur) REFERENCES utilisateur(id_utilisateur)
+);
+
+CREATE TABLE Categorie(
+   id_Categorie VARCHAR(50),
+   nom VARCHAR(50),
+   description VARCHAR(50),
+   PRIMARY KEY(id_Categorie)
+);
+
+CREATE TABLE produit(
+   id_reference INT,
+   nomarticle VARCHAR(50),
+   pointure DOUBLE,
+   prix_vente_unit DECIMAL(15,2) NOT NULL,
+   id_Categorie VARCHAR(50) NOT NULL,
+   PRIMARY KEY(id_reference),
+   FOREIGN KEY(id_Categorie) REFERENCES Categorie(id_Categorie)
+);
+
+CREATE TABLE detailspanier(
+   id_reference INT,
+   id_commande INT,
+   Quantité INT,
+   Remise DECIMAL(15,2),
+   Historique_commande VARCHAR(50),
+   PRIMARY KEY(id_reference, id_commande),
+   FOREIGN KEY(id_reference) REFERENCES produit(id_reference),
+   FOREIGN KEY(id_commande) REFERENCES panier(id_commande)
+);

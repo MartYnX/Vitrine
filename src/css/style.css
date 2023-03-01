@@ -1,0 +1,382 @@
+/* Importation FONT */
+@import url(http://fonts.googleapis.com/css?family=Ruda:400,700,900);
+
+
+/* Scrollbar (fonctionne que sur Chrome) */
+body::-webkit-scrollbar {
+    width: 1em;
+}
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px rgb(0, 0, 0);
+} 
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(60, 210, 255);
+    outline: 2.5px solid rgb(120, 120, 120);
+}
+
+
+/* Configuration de la page principale */
+
+/* Arrière de page */
+body {
+    color: rgb(120, 120, 120);
+	background: rgb(234, 234, 234);
+    font-family: 'Ruda', sans-serif;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size:13px;
+}
+
+
+/* Barre de séparation */
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0px;
+    border-top: 5px solid rgb(60, 210, 255);
+  }
+
+
+/* Menu de gauche */
+ul li {
+    list-style: none;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+/* Image circulaire compte */
+.placement-rond {
+	text-align: right;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    padding-right: 10px;
+}
+
+
+/* Image logo */
+.placement-logo-chaussure {
+	text-align: center;
+    padding-left: 7px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+/* Page par defaut */
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+/* Taille de la page du contenu */
+#configuration {
+    margin-left: 210px;
+    margin-right: 210px;
+    background: rgb(230, 230, 230);
+}
+
+.header, .footer {
+    min-height: 60px;
+    padding: 0 15px;
+}
+
+
+/* Header */
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1002;
+}
+
+/* Bande de couleur */
+.black-bg {
+    background: rgb(34, 36, 42); /* Bande du haut */
+    border-bottom: 1px solid rgb(57, 61, 70); /* Bande de gauche */
+}
+.wrapper {
+    display: inline-block;
+    margin-top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 0px;
+    width: 100%;
+}
+
+/* Configuration titre principal*/
+p.titre-principal span {
+    color: rgb(60, 210, 255);
+}
+p.titre-principal {
+    font-size: 30px;
+    float: left;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+p.titre-principal b {
+    font-weight: 900;
+}
+p.titre-principal:hover, a.titre-principal:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+
+
+/* Configuration menu déroulant */
+#sidebar {
+    width: 210px;
+    height: 100%;
+    position: fixed;
+    background: rgb(47, 50, 58);
+}
+ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
+    background: rgb(100, 100, 100);
+    color: rgb(255, 255, 255);
+    font-weight: 1000;
+    display:block;
+    padding: 8px 0;
+}
+.ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus:hover {
+    background: rgb(60, 60, 60);
+    color: rgb(60, 210, 255);
+}
+
+ul.sidebar-menu li a i {
+    font-size: 15px;
+    padding-right: 6px;
+}
+ul.sidebar-menu li a:hover i, ul.sidebar-menu li a:focus i {
+    color: rgb(255, 255, 255);
+}
+
+
+/* Bouton menu burger */
+.fa-bars:before {
+    content: "\f0c9";
+    color: rgb(255, 255, 255);
+}
+.sidebar-toggle-box {
+    float: left;
+    padding-right: 15px;
+    margin-top: 27px;
+}
+.sidebar-toggle-box .fa-bars {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 25px;
+}
+
+
+#sidebar ul li {
+    position: relative;
+}
+
+#sidebar .sub-menu > .sub li  {
+    padding-left: 32px;
+}
+
+#sidebar .sub-menu > .sub li:last-child {
+    padding-bottom: 10px;
+}
+
+.sidebar-closed > #sidebar > ul {
+    display: none;
+}
+
+.sidebar-closed #main-content {
+    margin-left: 0px;
+}
+
+.sidebar-closed #sidebar {
+    margin-left: -180px;
+}
+
+
+.nav-collapse.collapse {
+    display: inline;
+}
+
+ul.sidebar-menu , ul.sidebar-menu li ul.sub{
+    margin: -2px 0 0;
+    padding: 0;
+}
+
+ul.sidebar-menu {
+    margin-top: 75px;
+}
+
+#sidebar > ul > li > ul.sub {
+    display: none;
+}
+
+#sidebar > ul > li.active > ul.sub, #sidebar > ul > li > ul.sub > li > a {
+    display: block;
+}
+
+ul.sidebar-menu li ul.sub li{
+    background: rgb(47, 50, 58);
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+ul.sidebar-menu li ul.sub li:last-child{
+    border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+}
+
+ul.sidebar-menu li ul.sub li a {
+    font-size: 12px;
+    padding: 6px 0;
+    line-height: 35px;
+    height: 35px;
+    color: rgb(174, 178, 183);
+}
+
+ul.sidebar-menu li ul.sub li a:hover {
+	color: rgb(255, 255, 255);
+	background: transparent;
+}
+
+ul.sidebar-menu li{
+    line-height: 20px !important;
+    margin-bottom: 5px;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+ul.sidebar-menu li.sub-menu{
+    line-height: 15px;
+}
+
+ul.sidebar-menu li a span{
+    display: inline-block;
+}
+
+ul.sidebar-menu li a{
+    color: rgb(174, 178, 183);
+    text-decoration: none;
+    display: block;
+    padding: 15px 0 15px 10px;
+    font-size: 12px;
+    outline: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
+/* Petite flèche vers la droite */
+.fleche:before {
+    content: "\27A1"; 
+    color: rgb(60, 210, 255); 
+  }
+.fa-angle-right:before {
+    content: "\f105"; /* Flèche titre */
+    color: rgb(0, 0, 0); 
+}
+.fleche-contenu:before {
+    content: "\23E9";
+    color: rgb(0, 0, 0); 
+}
+	
+
+
+/* Configuration du formulaire */
+.page {
+	background: rgb(255, 255, 255);
+	margin: 10px;
+	padding: 10px;
+}
+
+
+
+/* Footer */
+.footer {
+    background: rgb(120, 120, 120); /* Couleur du ruban */
+    color: rgb(255, 255, 255); /* Couleur de l'écriture sur dans le ruban */
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+
+/* Configuration du bouton enregistrer */
+.boutton {
+    padding: 15px 100px;
+    margin: 10px 5px;
+    background: rgb(120, 120, 120);
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    border: 2.5px solid;
+}    
+.boutton::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    -webkit-transform: scaleY(0.1);
+    transform: scaleY(0.1);
+    transition: all 0.4s;
+}
+/* Changement de couleur quand on passe dessus */
+.boutton:hover {
+    background: rgb(60, 60, 60);
+    color: rgb(60, 210, 255);
+}
+
+
+
+.cadre {
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    padding: 20px 40px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 10px;
+    font-weight: bold;
+}
+
+
+
+.petit-cadre {
+    width:465px;
+    padding: 20px;
+    padding-bottom: 10px;
+    margin: 0px auto;
+    border: 1px solid rgb(0, 0, 0); /* Bordure du cadre */
+    background: rgb(245, 245, 245); /* Fond du cadre */
+}
+   
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(204, 204, 204); /* Couleur des bordures des cases */
+    box-sizing: border-box;
+}
+
+input:hover {
+    opacity:0.8;
+    background-color: rgb(200, 200, 200); /*Fond d'une case quand l'on passe la soure dessus */
+}
+
+.souligner {
+    text-decoration: underline;
+}
